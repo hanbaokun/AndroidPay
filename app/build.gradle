@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        syhdkey {
+            keyAlias 'shengyaohudong'
+            keyPassword 'shengyaohudong888'
+            storeFile file('C:/Develop/sdkKey/syhdkey.jks')
+            storePassword 'shengyaohudong888'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.syhd.payandroid"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile files('libs/alipaySdk-20160516.jar')
+    compile files('libs/libammsdk.jar')
+    compile files('libs/volley-6.0.jar')
+}
