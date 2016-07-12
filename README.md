@@ -1,4 +1,4 @@
-# PayAndroid
+# AndroidPay
 基于微信和支付宝的支付demo，可以直接拷贝代码到项目中使用
 >基于这哥们https://github.com/tsy12321/PayAndroid做的demo，支付宝可以进行参数测试，微信需要自行编写服务器代码获取支付参数
 ####微信支付
